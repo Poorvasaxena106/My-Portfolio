@@ -5,25 +5,31 @@
 
 :root {
     --font-color : white;
-    --span-color : #ff7f11;
-    --light-span-color : #e3a264;
-    --bg-color : black;
-    --grad-color : #aa713f;
-    --dark-grad-color : #7a5955;
+    --span-color : lightblue;
+    --bg-color : rgb(1, 1, 35);
+    --grad-color : black;
 }
 
 .light-mode {
     --font-color : black;
-    --span-color : rgb(167, 50, 144);
-    --light-span-color : rgb(183, 97, 166);
-    --bg-color : white;
-    --grad-color : rgb(129, 45, 112);
-    --dark-grad-color : rgb(220, 135, 203);
+    --span-color : #006666;
+    --bg-color : #ddecec;
+    --grad-color : #f3ece7;
 }
 
 a {
     color: inherit;
     text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+    border-left: 5px solid var(--span-color);
+    border-top: 5px solid var(--span-color);
+}
+
+span {
+    color: var(--span-color);
 }
 
 .anchor {
@@ -41,14 +47,6 @@ a {
     text-shadow: 0px 0px 2px;
 }
 
-body {
-    overflow-x: hidden;
-}
-
-span {
-    color: var(--span-color);
-}
-
 .btn-con {
     height: 8rem;
     align-items: center;
@@ -60,30 +58,39 @@ span {
 
 .main-content {
     background-color: var(--bg-color);
-    padding: 4rem 4rem 4rem 4rem;
+    padding: 1rem;
     color: var(--font-color);
-    background-size: cover;
-    transition: all 2s ease-in-out;
+    transition: all 1s ease-in-out;
+    min-height:100vh;
+    max-height: max-content;
+    border: .5rem double var(--span-color);
+    border-radius: .5rem;
 }
 
 .container {
     display: none;
 }
 
-#home {
-    margin: 2rem 2rem 2rem 2rem;
-    padding-top: 5rem;
+.home-image img{
+    /* margin-bottom: 2rem; */
+    padding: 1rem;
+    height: 90vh;
+    width: 100%;
+    box-shadow: 2px 2px 5px 2px var(--span-color),
+    -2px -2px 5px 2px var(--span-color);
 }
 
+/* controls------------------ */
 .active {
     display: contents;
     transition: all 2s ease-in-out;
     border: 5px solid var(--span-color);
+    height: 100vw;
 }
 
 .active-btn {
-    color: var(--light-span-color);
-    text-shadow: 0 0 5px var(--light-span-color);
+    color: var(--span-color);
+    text-shadow: 0 0 5px var(--span-color);
 }
 
 .controls {
@@ -102,8 +109,8 @@ span {
 }
 
 .controls .control i:hover, .theme-btn:hover {
-    color: var(--light-span-color);
-    text-shadow: 0 0 5px var(--light-span-color);
+    color: var(--span-color);
+    text-shadow: 0 0 5px var(--span-color);
 }
 
 .theme-btn {
@@ -114,13 +121,22 @@ span {
     padding: 1rem;
     cursor: pointer;
 }
+/* -------------------------------------- */
 
 #home-abt {
     background-image: linear-gradient(312.25deg, var(--grad-color) 0%, var(--bg-color) 85%);
     border-top-left-radius: 50px;
     border-bottom-right-radius: 50px;
-    padding: 2rem;
+    margin-top: 1.5rem;
+    width: 100%;
+    padding: 4rem;
+    min-height: 80vh;
+    max-height: max-content;
+    box-shadow: 2px 2px 5px 2px var(--span-color),
+    -2px -2px 5px 2px var(--span-color);
 }
+
+/* About-------------------- */
 
 .abt-text {
     margin-bottom: 2rem;
@@ -132,7 +148,6 @@ span {
 
 .abt-text:hover {
     box-shadow: 1px 1px 5px var(--font-color);
-    padding: .6rem;
 }
 
 .marksheet {
@@ -141,6 +156,9 @@ span {
 
 #info-abt-me h4 {
     text-shadow: 1px 1px var(--span-color);
+}
+#info-abt-me ul{
+    margin-left: 1rem;
 }
 .btn-icon {
     color: var(--span-color);
@@ -167,7 +185,7 @@ span {
 .python, .sql {
     display: flex;
     width: 90%;
-    background-image: linear-gradient(312.25deg, var(--grad-color) 0%, var(--dark-grad-color) 95%);
+    background-image: linear-gradient(312.25deg, var(--grad-color) 0%, var(--span-color) 95%);
     color: var(--font-color);
     justify-content: center;
     align-items: center;
@@ -177,7 +195,7 @@ span {
 .html, .css {
     display: flex;
     width: 95%;
-    background-image: linear-gradient(312.25deg, var(--grad-color) 0%, var(--dark-grad-color) 95%);
+    background-image: linear-gradient(312.25deg, var(--grad-color) 0%, var(--span-color) 95%);
     color: var(--font-color);
     justify-content: center;
     align-items: center;
@@ -187,7 +205,7 @@ span {
 .js {
     display: flex;
     width: 75%;
-    background-image: linear-gradient(312.25deg, var(--grad-color) 0%, var(--dark-grad-color) 95%);
+    background-image: linear-gradient(312.25deg, var(--grad-color) 0%, var(--span-color) 95%);
     color: var(--font-color);
     justify-content: center;
     align-items: center;
@@ -197,7 +215,7 @@ span {
 .ccpp {
     display: flex;
     width: 80%;
-    background-image: linear-gradient(312.25deg, var(--grad-color) 0%, var(--dark-grad-color) 95%);
+    background-image: linear-gradient(312.25deg, var(--grad-color) 0%, var(--span-color) 95%);
     color: var(--font-color);
     justify-content: center;
     align-items: center;
@@ -217,10 +235,83 @@ span {
     font-weight: 900;
 }
 
+/* work-experience------------ */
+.experience-time {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.experience-time h5 {
+    margin-bottom: 0;
+}
+
+.experience-time p{
+    margin-bottom: 0;
+    font-size: small;
+    font-weight: 600;
+}
+
+
+/* work----- */
+
+.main-title h2 {
+    color: var(--font-color);
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.image {
+    height: 10rem;
+    width: 14rem;
+}
+
+.image img {
+    height: 10rem;
+    width: 14rem;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+#project-box{
+    margin-bottom: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    box-shadow: 1px 1px var(--font-color);
+    border-radius: 5px;
+}
+
+#project-box:hover {
+    box-shadow: 2px 2px 10px var(--font-color),
+    -2px -2px 10px var(--font-color);
+}
+
+.icons i{
+    font-size: 2rem;
+}
+
+.icon i:hover {
+    text-shadow: 2px 2px 10px var(--span-color),
+    -2px -2px 10px var(--span-color);
+}
+
+.project-list li {
+    color: var(--font-color);
+}
+
+.hover-items h5 {
+    text-shadow: .8px .8px var(--span-color);
+}
+
 /* contact-- form---------- */
 
+
+#my-contact {
+    padding: 1rem;
+}
 .contact-item {
     font-weight: 500;
+    display: flex;
+    margin: 1rem 0;
 }
 
 .icon span, .contact-item span {
@@ -230,6 +321,10 @@ span {
 
 .icon i {
     color: var(--span-color);
+}
+
+#your-info {
+    padding: 1rem;
 }
 
 .input-control {
@@ -255,7 +350,7 @@ span {
     border: none;
     border-radius: 3px;
     background-color: var(--span-color);
-    color: var(--font-color);
+    color: var(--bg-color);
     width: 5rem;
     margin-bottom: 1rem;
 }
@@ -281,54 +376,30 @@ span {
     margin-top: 1rem;
 }
 
-/* work----- */
-
-.main-title h2 {
-    color: var(--font-color);
-    font-size: 2rem;
-    font-weight: 800;
+@media (max-width:900px){
+    .controls .control i, .theme-btn{
+        font-size: 1rem;
+    }
+    .main-content {
+        padding-right: 3rem;
+    }
+    #project-box {
+        box-shadow: none;
+    }
+    .home-image img{
+        height: 70vh;
+    }
+    #home-abt{
+        padding: 1rem .5rem;
+    }
+    
 }
-
-.image {
-    height: 10rem;
-    width: 14rem;
-}
-
-.image img {
-    height: 10rem;
-    width: 14rem;
-    object-fit: cover;
-    border-radius: 3px;
-    box-shadow : 5px 5px 10px var(--bg-color);
-}
-
-#project-box{
-    margin-bottom: 2rem;
-    background-image: url("bg-project.jpg");
-    background-image: linear-gradient(312.25deg, var(--grad-color) 0%, var(--bg-color) 55%);
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    box-shadow: 1px 1px var(--font-color);
-    border-radius: 5px;
-}
-
-#project-box:hover {
-    box-shadow: 2px 2px 10px var(--font-color);
-}
-
-.icons i{
-    font-size: 2rem;
-}
-
-.icon i:hover {
-    text-shadow: 2px 2px 10px var(--light-span-color);
-    font-size: 2.1rem;
-}
-
-.project-list li {
-    color: var(--font-color);
-}
-
-.hover-items h5 {
-    text-shadow: .8px .8px var(--span-color);
+@media (max-width:1092px){
+    .contact-item {
+        display: block;
+    }
+    .contact-item .icon {
+        display: flex;
+        align-items: center;
+    }
 }
